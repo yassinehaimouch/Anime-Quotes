@@ -1,7 +1,14 @@
-import './App.css';
+import React from "react";
+import "./App.css";
+import QuoteInfo from "./components/QuoteInfo";
+
 
 function App() {
-  return <div className="app-container">Hello World!</div>;
+  return (
+    <div>
+      <QuoteInfo />
+    </div>
+  );
 }
 
 export default App;
