@@ -6,7 +6,7 @@
 .anime-character{
   display: flex;
   justify-content: space-between;
-  margin-top: 100px;
+  margin: 100px 0 50px 0;
   align-items: flex-end;
 }
 .italic-style{
@@ -26,6 +26,20 @@
   height: 100px;
   border-radius: 50%;
   cursor: pointer;
-  margin-top: 50px;
   border-width: 3px ;
+}
+
+@media screen and (max-width: 490px){
+  .quote-container{
+    font-size: 1.5rem;
+  }
+  .italic-style{
+    font-size: 1.2rem;
+  }
+  .anime-character{
+    margin: 30px 0 30px 0;
+  }
+  .quote-container{
+    margin-top: 30px;
+  }
 }
