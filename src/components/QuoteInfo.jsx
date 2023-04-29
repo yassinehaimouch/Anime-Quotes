@@ -20,7 +20,24 @@ function QuoteInfo() {
     case "pending":
       return <h1 className="quote-container">loading...</h1>;
     case "rejected":
-      throw error;
+      return (
+        <div className="quote-container">
+          <h1>{`${error}`}</h1>
+          <div className="anime-character">
+            <h3 className="italic-style">—Failed to fetch</h3>
+            <div className="anime">
+              <h6 className="anime-title">Anime :</h6>
+              <h3 className="italic-style">Failed to fetch</h3>
+            </div>
+          </div>
+          <button
+            className="btn"
+            onClick={() => setCount((count) => count + 1)}
+          >
+            New Quote
+          </button>
+        </div>
+      );
     case "resolved":
       return (
         <div className="quote-container">
