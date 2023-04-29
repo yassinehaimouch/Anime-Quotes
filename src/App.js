@@ -9,7 +9,7 @@ function App() {
         <h1>Anime & Quotes</h1>
         <h1>
           <a
-            href="https://animechan.vercel.app/api/random"
+            href="https://animechan.vercel.app/"
             rel="noreferrer"
             target="_blank"
             className="link"
