@@ -1,4 +1,17 @@
-.header{
+.app-container {
+  margin: 0 20px;
+}
+.header {
   display: flex;
   justify-content: space-between;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: rgb(23, 23, 23);
 }

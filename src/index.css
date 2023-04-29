@@ -7,3 +7,8 @@
   background-color: #DDDDDD;
   font-family: 'Inter', sans-serif;
 }
+
+body{
+  max-width: 1440px;
+  margin: 20px auto;
+}

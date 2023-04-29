@@ -1,5 +1,6 @@
 import React from "react";
 import useAsync from "../Hooks/useAsync";
+import "./quoteinfo.css";
 
 function QuoteInfo() {
   const [count, setCount] = React.useState(0);
@@ -15,13 +16,30 @@ function QuoteInfo() {
   const { data, status, error } = state;
   switch (status) {
     case "idle":
-      return <span>Submit a data</span>;
+      return <span className="quote-container">Searching</span>;
     case "pending":
-      return <h1>loading...</h1>;
+      return <h1 className="quote-container">loading...</h1>;
     case "rejected":
       throw error;
     case "resolved":
-      return <div>{`${data.anime}, ${data.character}, ${data.quote}`}</div>;
+      return (
+        <div className="quote-container">
+          <h1>{data.quote}</h1>
+          <div className="anime-character">
+            <h3 className="italic-style">{`— ${data.character}`}</h3>
+            <div className="anime">
+              <h6 className="anime-title">Anime :</h6>
+              <h3 className="italic-style">{data.anime}</h3>
+            </div>
+          </div>
+          <button
+            className="btn"
+            onClick={() => setCount((count) => count + 1)}
+          >
+            New Quote
+          </button>
+        </div>
+      );
     default:
       throw new Error("This should be impossible");
   }
